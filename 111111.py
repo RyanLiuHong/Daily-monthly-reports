@@ -24,7 +24,7 @@ def run():
     #
     print('现在开始更新共享盘文件啦！！！')
     os.system("python ./日常更新共享盘文件.py")
-    sleep(3)
+    sleep(5)
     exit()
 
 run()
