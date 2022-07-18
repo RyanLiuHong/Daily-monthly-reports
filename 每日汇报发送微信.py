@@ -57,6 +57,7 @@ def FindWindow(WINDOW,chatroom):
         print('找不到【%s】窗口' % chatroom)
         if(WINDOW=='QT5QWindow' and chatroom=='文件恢复'):
             print("进入再一次文件恢复")
+            time.sleep(1.5)
             FindWindow('Qt5QWindow','文件恢复')
         elif(WINDOW=='QT5QWindow' and chatroom=='登录以重新连接'):
             print("进入再一次登录")
