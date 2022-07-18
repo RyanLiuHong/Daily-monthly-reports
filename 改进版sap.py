@@ -18,8 +18,9 @@ def Main():
     try:
         sap_app = r"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"  # 您的saplogon程序本地完整路径
         subprocess.Popen(sap_app)
+        print('1')
 
-        time.sleep(1)
+        time.sleep(2)
 
         flt = 0
         while flt == 0:

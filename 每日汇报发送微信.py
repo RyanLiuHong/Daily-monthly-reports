@@ -170,25 +170,28 @@ if __name__ == '__main__':
     path = r'D:' + '\\'
     list_name = ['华乐品质问题沟通', '星宝缘品质问题沟通', '凯沙琪品质问题沟通', '金磨坊品质问题沟通', '美恒诚品质问题沟通', '启泰品质问题沟通', '大新品质问题沟通', '艺星品质问题沟通']
     # 循环发送tableau图片
-    for n in range(len(list_code)):
-        # 发送文件消息（图片、文档、压缩包等）
-        SendWxFileMsg(list_name[n], path + str(list_code[n]) + '.bmp')
-        # 发送文本消息（微信号或微信昵称或备注，需要发送的文本消息）
-        # SendWxMsg('贵司截至昨日不良率、错漏率，请查阅')   #截至昨日
-        print('{}已发送'.format(list_code[n]))
-    print('图片已发送完全部')
+
+    # for n in range(len(list_code)):
+    #     # 发送文件消息（图片、文档、压缩包等）
+    #     SendWxFileMsg(list_name[n], path + str(list_code[n]) + '.bmp')
+    #     # 发送文本消息（微信号或微信昵称或备注，需要发送的文本消息）
+    #     # SendWxMsg('贵司截至昨日不良率、错漏率，请查阅')   #截至昨日
+    #     print('{}已发送'.format(list_code[n]))
+    # print('图片已发送完全部')
 
     path1 = r'D:\1.office_syx\不良\每日不良汇报' + '\\'
     list_code1 = (100105, 100118, 100120, 100122, 100140, 100141, 103195, 103233, 103407, 103695, 104657, 104738, 104656, 105042, 105078, 105171)
-    # 循环发送
-    for n in range(len(list_code1)):
-        # 发送文件消息（图片、文档、压缩包等）
-        SendWxFileMsg(str(list_code1[n]), path1 + str(list_code1[n]) + '-' + yesterday_format + '不良.xlsx')
-        # 发送文本消息（微信号或微信昵称或备注，需要发送的文本消息）
-        SendWxMsg('贵司截至昨日不良率、错漏率，请查阅')  # 截至昨日
-        print('{}已发送'.format(list_code1[n]))
+    # 循环发送当日excel报表
+
+    # for n in range(len(list_code1)):
+    #     # 发送文件消息（图片、文档、压缩包等）
+    #     SendWxFileMsg(str(list_code1[n]), path1 + str(list_code1[n]) + '-' + yesterday_format + '不良.xlsx')
+    #     # 发送文本消息（微信号或微信昵称或备注，需要发送的文本消息）
+    #     SendWxMsg('贵司截至昨日不良率、错漏率，请查阅')  # 截至昨日
+    #     print('{}已发送'.format(list_code1[n]))
 
     print('微信每日汇报已完成')
+    time.sleep(2)
 
     FindWindow('Qt5QWindowIcon','Tableau - 每日汇报[已恢复]')
     # 推出每日汇报[已恢复]
